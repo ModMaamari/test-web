@@ -1,37 +1,78 @@
-## Welcome to GitHub Pages
+# NLP | Sequence to Sequence Networks| Part 1| Processing text data
 
-You can use the [editor on GitHub](https://github.com/ModMaamari/test-web/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+There are many benefits you can get by understanding NLP, you can make your own model to answer questions and use it in a chat bot, or you can make a translator to translate a text from your language to English language or the opposite, or maybe you make a text summarizer.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+In this tutorial series, we will learn how to make a seq2seq network and train it to translate English text to French, or you can use it in another seq2seq purpose.
 
-### Markdown
+In this part of the series, we will learn about processing text data to feed it to the seq2seq network.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Overview :
+I explained the text processing steps in the next pictures :
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+So, to represent the word ball :
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+and, , to represent the sentence hello world! :
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
+I hope that you got some intuition of the steps of processing the text data.
+
+Now we will do some coding using python :
+
+First, lets import numpy :
+
+``import numpy as np
+Then, load the text file:
+
+
+After that, split the samples and get the necessary dictionaries :
+
+
+Make the needed dictionaries to convert characters to integers and the opposite :
+
+
+Compute the length of the longest sample and some other variables:
+
+
+Output :
+
+```
+Number of E Samples  	: 160872
+Number of D Samples 	: 160872
+Number of D Chars  	: 115
+Number of E Chars 	: 92
+The Longest D Sample has 351 Chars
+The Longest E Sample has 286 Chars
+E → the input text ( Will be encoded later )
+D → the output text ( Will be decoded later )
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+Next, we will One Hot Encode the samples by letters 
+ex:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ModMaamari/test-web/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Hi — -> [[0,0,0,…,1,0,0,0],[0,0,0,…,0,1,0,0]] 
+where we represent each sample as an array of zeros that has (n) rows and (j) columns
+n = Number of Characters in the longest Sample
+j = number of chars in our dictionary
 
-### Support or Contact
+We will make three sets of data :
+1- Encoder Input Samples ( English sentences )
+2- Decoder Input Samples ( French sentences)
+3- Target ( French sentences)
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Target will be the same data as Decoder Input but it will be one character ahead of it 
+Ex : 
+Decoder Input = ‘\tHow are yo’
+Target = ‘How are you’
+
+
+[Output]:
+Shape of encoder_input_data : (160872, 286, 92) 
+Shape of decoder_input_data : (160872, 351, 115) 
+Shape of target_data        : (160872, 351, 115)
+Now, the data is ready to be used by a seq2seq model.
+
+## What Next:
+In the next part [part 2] we will make the model and train it, then use it to translate English text to French.
