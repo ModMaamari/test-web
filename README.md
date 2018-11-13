@@ -1,7 +1,5 @@
 # NLP | Sequence to Sequence Networks| Part 1| Processing text data
 
-https://gist.github.com/ModMaamari/daa83945bc059a0295c9de21404f755a
-
 There are many benefits you can get by understanding NLP, you can make your own model to answer questions and use it in a chat bot, or you can make a translator to translate a text from your language to English language or the opposite, or maybe you make a text summarizer.
 
 In this tutorial series, we will learn how to make a seq2seq network and train it to translate English text to French, or you can use it in another seq2seq purpose.
@@ -9,19 +7,19 @@ In this tutorial series, we will learn how to make a seq2seq network and train i
 In this part of the series, we will learn about processing text data to feed it to the seq2seq network.
 
 ## Overview :
-*I explained the text processing steps in the next pictures :*
-
+**I explained the text processing steps in the next pictures :**
+![](images/01.jpg)
 
 So, to represent the word ball :
-
+![](images/02.jpg)
 
 and, , to represent the sentence hello world! :
-
+![](images/03.jpg)
 
 I hope that you got some intuition of the steps of processing the text data.
 
 
-Now we will do some coding using python :
+**Now we will do some coding using python :**
 
 First, lets import numpy :
 
@@ -55,6 +53,8 @@ The Longest E Sample has 286 Chars
 E → the input text ( Will be encoded later )
 
 D → the output text ( Will be decoded later )
+{% gist 2066b7234f0bfe2fc2b5597b2ce9ecef %}
+
 
 Next, we will One Hot Encode the samples by letters 
 
@@ -85,7 +85,7 @@ Target = ‘How are you’
 
 ```
 
-{% gist 2066b7234f0bfe2fc2b5597b2ce9ecef %}
+{% gist abb8b6366341a8e86efe88d195e9bd47 %}
 
 ```
 [Output]:
