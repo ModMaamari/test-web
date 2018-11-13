@@ -24,6 +24,7 @@ I hope that you got some intuition of the steps of processing the text data.
 First, lets import numpy :
 
 ``` import numpy as np ```
+
 Then, load the text file:
 
 {% gist 2263005c1231f8053d09458c7dda089b %}
@@ -53,6 +54,7 @@ The Longest E Sample has 286 Chars
 E → the input text ( Will be encoded later )
 
 D → the output text ( Will be decoded later )
+
 {% gist 2066b7234f0bfe2fc2b5597b2ce9ecef %}
 
 
