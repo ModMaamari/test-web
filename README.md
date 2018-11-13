@@ -1,5 +1,5 @@
 # NLP | Sequence to Sequence Networks| Part 1| Processing text data
-
+![useful image]({{ https://modmaamari.github.io/test-web/ }}/images/01.jpg)
 There are many benefits you can get by understanding NLP, you can make your own model to answer questions and use it in a chat bot, or you can make a translator to translate a text from your language to English language or the opposite, or maybe you make a text summarizer.
 
 In this tutorial series, we will learn how to make a seq2seq network and train it to translate English text to French, or you can use it in another seq2seq purpose.
