@@ -7,7 +7,7 @@ In this tutorial series, we will learn how to make a seq2seq network and train i
 In this part of the series, we will learn about processing text data to feed it to the seq2seq network.
 
 ## Overview :
-I explained the text processing steps in the next pictures :
+*I explained the text processing steps in the next pictures :*
 
 
 So, to represent the word ball :
