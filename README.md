@@ -1,6 +1,6 @@
 # NLP | Sequence to Sequence Networks| Part 1| Processing text data
 
-![useful image]({{ https://modmaamari.github.io/test-web/ }}/images/01.jpg)
+![image01](https://github.com/ModMaamari/test-web/tree/master/images/01.jpg)
 
 There are many benefits you can get by understanding NLP, you can make your own model to answer questions and use it in a chat bot, or you can make a translator to translate a text from your language to English language or the opposite, or maybe you make a text summarizer.
 
